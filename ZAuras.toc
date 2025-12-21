@@ -1,0 +1,81 @@
+## Interface: 11200
+## Title: ZAuras
+## Notes: Turtle WoW WeakAuras!
+## Author: Zasamel
+## Version: 0.1.0-dev
+## SavedVariables: ZAurasDB
+
+#--- Bootstrap ---
+src\Bootstrap.lua
+src\DB.lua
+
+#--- Config ---
+src\Config.lua
+src\AbilitiesByNameMapping.lua
+
+#--- Utils ---
+src\Utils\Log.lua
+src\Utils\SpellInfo.lua
+src\Utils\StringHelper.lua
+src\Utils\UUID.lua
+
+#--- Services ---
+src\Services\BuffWatcher.lua
+src\Services\SpellCache.lua
+
+#--- AuraEngine (ECS) ---
+src\Services\AuraEngine\Core\EntityManager.lua
+src\Services\AuraEngine\Core\World.lua
+src\Services\AuraEngine\Components\BuffDataComponent.lua
+src\Services\AuraEngine\Components\AuraConfigComponent.lua
+src\Services\AuraEngine\Components\IconComponent.lua
+src\Services\AuraEngine\Components\ConditionComponent.lua
+src\Services\AuraEngine\Components\PositionComponent.lua
+src\Services\AuraEngine\Components\BuffTypeComponent.lua
+src\Services\AuraEngine\Components\DebuffTypeComponent.lua
+src\Services\AuraEngine\Components\RemoveBuffDataComponent.lua
+src\Services\AuraEngine\Systems\BuffScanSystem.lua
+src\Services\AuraEngine\Systems\AuraMatchSystem.lua
+src\Services\AuraEngine\Systems\ConditionEvaluationSystem.lua
+src\Services\AuraEngine\Systems\IconRenderSystem.lua
+src\Services\AuraEngine\Systems\IconPositionSystem.lua
+src\Services\AuraEngine\Systems\CleanupSystem.lua
+src\Services\AuraEngine\Systems\FlagCleanupSystem.lua
+src\Services\AuraEngine\Systems\DebugPrintSystem.lua
+src\Services\AuraEngine\AuraEngine.lua
+
+#--- Components ---
+src\Components\Button.lua
+src\Components\Form.lua
+src\Components\Frame.lua
+src\Components\Grid.lua
+src\Components\Dialog.lua
+
+#--- Models ---
+src\Models\ZAuraModel.lua
+
+#--- Views ---
+src\Views\BaseView.lua
+src\Views\ApplicationView.lua
+src\Views\ZAura\EditZAuraView.lua
+src\Views\ZAura\MainZAuraView.lua
+src\Views\ZAura\NewZAuraView.lua
+
+#--- Controllers ---
+src\Controllers\ViewController.lua
+
+#--- States ---
+src\States\CloseAddonState.lua
+src\States\ZAura\EditZAuraState.lua
+src\States\ZAura\MainZAuraState.lua
+src\States\ZAura\NewZAuraState.lua
+
+#--- Commands ---
+src\Commands\DebugCommands.lua
+# src\Commands\ZAuraCommands.lua
+
+#--- Init ---
+src\Container.lua
+src\ServiceProvider.lua
+src\SlashCommands.lua
+src\App.lua
