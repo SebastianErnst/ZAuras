@@ -22,6 +22,7 @@ src\Utils\UUID.lua
 #--- Services ---
 src\Services\BuffWatcher.lua
 src\Services\SpellCache.lua
+src\Services\FormBuilder.lua
 
 #--- AuraEngine (ECS) ---
 src\Services\AuraEngine\Core\EntityManager.lua
@@ -47,6 +48,7 @@ src\Services\AuraEngine\AuraEngine.lua
 #--- Components ---
 src\Components\Button.lua
 src\Components\Form.lua
+src\Components\ZAuraForm.lua
 src\Components\Frame.lua
 src\Components\Grid.lua
 src\Components\Dialog.lua

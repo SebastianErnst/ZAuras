@@ -5,8 +5,7 @@ ZA.States.ZAura.NewZAuraState = NewZAuraState
 function NewZAuraState:new()
     local public = {}
     public.name = "NewZAuraState"
-    local NewZAuraView = ZA.Container:resolve("NewZAuraView")
-    local aurasModel = ZA.Container:resolve("ZAuraModel")
+    local NewZAuraView = ZA.Container:resolve("NewZAuraView")    
 
     function public:onEnter()
         NewZAuraView:show()

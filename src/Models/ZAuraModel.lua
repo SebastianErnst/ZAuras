@@ -139,6 +139,7 @@ function ZAuraModel:new()
                 tostring(aura.positionX),
                 tostring(aura.positionY),
                 aura.anchorPoint or "nil",
+                aura.relativePoint or "nil",
                 tostring(aura.alpha)
             ))
         end

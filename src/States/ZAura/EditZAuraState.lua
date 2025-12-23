@@ -6,8 +6,20 @@ function EditZAuraState:new()
     local public = {}
     public.name = "EditZAuraState"
     local EditZAuraView = ZA.Container:resolve("EditZAuraView")
+    local ZAuraModel = ZA.Container:resolve("ZAuraModel")
+    local selectedAuraId = nil
+
+    function public:setAuraId(auraId)
+        selectedAuraId = auraId
+    end
 
     function public:onEnter()
+        if selectedAuraId then
+            local auraData = ZAuraModel:getById(selectedAuraId)
+            if auraData then
+                EditZAuraView:setAuraData(auraData, selectedAuraId)
+            end
+        end
         EditZAuraView:show()
     end
 

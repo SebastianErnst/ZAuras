@@ -7,9 +7,12 @@ function MainZAuraState:new()
     public.name = "MainZAuraState"
     local MainZAuraView = ZA.Container:resolve("MainZAuraView")
     local aurasModel = ZA.Container:resolve("ZAuraModel")
-    local Log = ZA.Container:resolve("Log")
 
     function public:onEnter()
+        -- Reload auras in engine to create entity
+        local AuraEngine = ZA.Container:resolve("AuraEngine")
+        AuraEngine:reloadAuras()
+
         local auras = aurasModel:getAll()
         MainZAuraView:refreshIconList(auras)
         MainZAuraView:show()

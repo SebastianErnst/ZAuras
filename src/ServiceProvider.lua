@@ -32,6 +32,10 @@ function ServiceProvider:registerAll(container)
     container:register("AuraEngine", function()
         return ZA.Services.AuraEngine.Engine
     end, "service")
+
+    container:register("FormBuilder", function()
+        return ZA.Services.FormBuilder:new()
+    end, "service")
     
     -- Register Components
     container:register("FrameComponent", function()
@@ -53,6 +57,11 @@ function ServiceProvider:registerAll(container)
     container:register("DialogComponent", function()
         return ZA.Components.Dialog:new()
     end, "component")
+
+    container:register("ZAuraFormComponent", function()
+        return ZA.Components.ZAuraForm:new()
+    end, "component")
+    
     
     -- Register Models
     container:register("ZAuraModel", function()

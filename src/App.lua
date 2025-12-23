@@ -30,6 +30,8 @@ function App:init()
 
         ViewController:goToCloseAddonState()
         ViewController:goToMainZAuraState()
+        -- ViewController:goToNewZAuraState()
+
     end 
 
     ZA.DB:init(onDBInitialized)

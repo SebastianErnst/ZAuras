@@ -29,7 +29,7 @@ function MainZAuraView:new()
 
     local buttonEdit = ButtonComponent:Create(FrameContent, "Edit")
     buttonEdit:SetPoint("BOTTOMLEFT", buttonNew, "BOTTOMRIGHT", ZA.UI.BUTTON_SPACING, 0)
-    buttonEdit:onClick(function()        
+    buttonEdit:onClick(function()
         if selectedAuraId then
             ViewController:goToEditZAuraState(selectedAuraId)
         end
@@ -94,7 +94,9 @@ function MainZAuraView:new()
             end)
 
             icon:onDoubleClick(function()
-                Log:info(icon:GetName() .. " double-clicked!")
+                if selectedAuraId then
+                    ViewController:goToEditZAuraState(selectedAuraId)
+                end
             end)
 
             -- -- Calculate position

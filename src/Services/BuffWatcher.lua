@@ -33,7 +33,6 @@ function BuffWatcher:new()
                 
                 if spellData then
                     local name = spellData.name
-                    print(name)
                     buffs[name] = {
                         index = buffIndex,
                         name = name,

@@ -99,6 +99,10 @@ function SpellCache:new()
         return bySpellId[spellId]
     end
 
+    function public:getAllMappedByName()
+        return ZA.AbilitiesByNameMapping
+    end
+
     return public
 end
 
